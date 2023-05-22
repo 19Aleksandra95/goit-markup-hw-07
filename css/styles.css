@@ -47,6 +47,7 @@ p{
 }
 ul{
   margin: 0;
+  padding: 0;
   padding-left: 0;
 }
 .container{
@@ -384,10 +385,16 @@ color: #434455;
   }
 }
 
+@media only screen and (max-width: 1157px) {
+  .features-list-item{
+      margin-bottom: 72px;    
+    }
+  }
+
 
 @media only screen and (min-width:1158px) {
 .features-list-item{
-  width: 264px;
+  width: calc((100%-1*24px)/4);
 }
 
 }
