@@ -50,12 +50,31 @@ ul{
   padding-left: 0;
 }
 .container{
-  width: 1158px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 428px;
   margin: 0 auto ;
   padding-left: 15px;
   padding-right: 15px;
-
 }
+
+@media only screen and(min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px){
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+  padding-right: 15px;
+  }
+}
+
+
+
+
 .header{                          
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -318,6 +337,12 @@ color: #434455;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.features-icon {
+  display: none;
+}
+
+@media only screen and (min-width: 1158px) {
 .features-icon{
    display: flex; 
    align-items: center;
@@ -330,21 +355,44 @@ color: #434455;
   top: 0px;
   left: 0px;
 }
+}
+
 .features-container{
   display: flex;
 }
+
+
 .features{
   padding: 120px 0;
   
   background-color:var(--primary-white);
 }
-.features-list{
-  display: flex;
-  gap: 24px;
+
+@media only screen and (min-width:1158px) {
+  .features{
+      padding: 120px 0;
+          }     
+      }
+
+
+@media only screen and (min-width:428px){
+  .features-list{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;  
+  }
 }
+
+
+@media only screen and (min-width:1158px) {
 .features-list-item{
   width: 264px;
 }
+
+}
+
+@media only screen and (min-width:1158px) {
 .features-title{
   margin-bottom: 8px;
   
@@ -354,6 +402,14 @@ color: #434455;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
+}
+
+@media only screen and (min-width: 768px) {
+  .features-title{
+      text-align: start;
+    }
+  }
+
 .features-descr {
   color: var(--primary-text-color);
   font-size: 16px;
@@ -361,12 +417,26 @@ color: #434455;
 
 }
 
+@media only screen and (min-width: 1158px) {  
+  .features-descr {
+      font-weight: 400;
+  }
+  }
+
 /* TEAM */
+.what-are-we-doing {
+  display: none;
+}
+
+@media only screen and (min-width: 1158px) {
 .what-are-we-doing {
   padding-bottom: 120px;
   
   background-color:var(--primary-white);   
 }
+}
+
+
 .section-title{
   margin-bottom: 72px;
   
@@ -403,6 +473,15 @@ color: #434455;
   background-color:#F4F4FD ;
 
 }
+
+@media only screen and (min-width: 1158px) {
+   
+  .team-section{
+      padding: 120px 0;   
+  
+  }}
+
+
 .card-container{
   padding: 32px 0px 32px 0px;
 }
@@ -411,12 +490,52 @@ color: #434455;
   display: flex;
   gap: 24px;
 }
+
+@media only screen and (max-width: 757px) {
+  .team-list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 72px;
+  }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .team-list{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        column-gap: 24px;
+        }
+      }
+
+      @media only screen and (min-width: 1158px) {
+        .team-list{
+            display: flex;
+            gap: 24px;
+            }   
+        }
+
+
 .team-card{
 
   border-radius: 0 0 4px 4px;
   background-color: var(--primary-white);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
+@media only screen and (min-width: 768px) {
+  .team-card {
+      width: calc((100%-24px)/2);
+      }  
+  }
+
+  @media only screen and (min-width: 1158px) {
+    .team-card {
+        width: calc((100%-72px)/4);  
+      }
+    }
    
 .team-name{
   text-align: center;
@@ -472,10 +591,22 @@ color: #434455;
   fill: var(--fill-color);
  
 }
+
+/*==============COSTUMERS=========*/
+
 .customer-section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+@media only screen and (min-width: 1158px) {
+  .customer-section {
+    padding-top: 120px;  
+    padding-bottom: 120px;
+  }
+
+}
+
 .customer-section-title {
   font-size: 36px;
   line-height: 1.1;
@@ -495,11 +626,39 @@ color: #434455;
   justify-content: center;
 
 }
+
+@media only screen and (min-width: 1158px) {
+  .customer-list {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+  
+  }  
+}
+
 .customer-list-item {
   width:calc((100% - 120px)/6);
   height: 88px;
   
 }
+
+@media only screen and (min-width: 768px) {
+  .customer-list-item {
+      width:calc((100% - 32px)/3);
+      height: 88px;
+    }      
+   }   
+
+
+  @media only screen and (min-width: 1158px) {
+  .customer-list-item {
+      width:calc((100% - 120px)/6);
+      height: 88px;
+      } 
+  }
+
+
 .customer-list-link{
   width: 100%;
   height: 100%;
